@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Inserir foto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form >
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input name="nome" [(ngModel)]="foto.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Descrição</ion-label>
+      <ion-input name="descricao" type="text" [(ngModel)]="foto.descricao"></ion-input>
+    </ion-item>
+
+    <ion-card>
+      <img [src]="captureDataUrl" *ngIf="captureDataUrl"/>
+    </ion-card>
+
+    <button ion-button block (click)="selecionarFoto(0)" type="submit" >Selecionar Foto</button>
+    <button ion-button block (click)="insertFoto()" type="submit" >Inserir foto</button>
+  </form>
+</ion-content>
