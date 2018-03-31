@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ionic
+    password: admin
+    url: jdbc\:postgresql\://localhost/ionic
+  jpa:
+    hibernate:
+      ddl-auto: update
+  http:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
